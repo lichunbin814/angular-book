@@ -1,3 +1,6 @@
-<h1>
-  {{title}}
-</h1>
+<div *ngIf="isLoggedIn">
+    <p>已登入</p>
+</div>
+<div *ngIf="!isLoggedIn">
+    <p>末登入，請您....</p>
+</div>
