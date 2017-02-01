@@ -35,6 +35,8 @@ describe('AppComponent', () => {
 
   it(`登入時，需顯示'已登入'的提示訊息`, async(() => {
     component.isLoggedIn = true;
+    // 若修改了component裡的資料，需要告訴Angular，讓它重新繫結
+    fixture.detectChanges();
 
     const expectVal = '已登入';
     const actualVal = (fixture.nativeElement as HTMLElement).querySelector('p').textContent;
