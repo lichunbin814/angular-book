@@ -32,4 +32,12 @@ describe('AppComponent', () => {
     const actualVal = (fixture.nativeElement as HTMLElement).querySelector('p').textContent;
     expect(actualVal).toContain(expectVal);
   }));
+
+  it(`登入時，需顯示'已登入'的提示訊息`, async(() => {
+    component.isLoggedIn = true;
+
+    const expectVal = '已登入';
+    const actualVal = (fixture.nativeElement as HTMLElement).querySelector('p').textContent;
+    expect(actualVal).toContain(expectVal);
+  }));
 });
